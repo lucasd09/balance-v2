@@ -49,8 +49,9 @@ export const {
     }),
   ],
   pages: {
-    signIn: "/dashboard",
-    signOut: "/",
+    signIn: "/sign-in",
+    newUser: "/dashboard",
+    signOut: "/sign-in",
   },
   session: {
     strategy: "jwt",
