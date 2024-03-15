@@ -17,21 +17,21 @@ export default function Sidebar() {
           className="flex h-14 items-center w-44 hover:bg-secondary transition-colors"
         >
           <LayoutDashboard className="h-6 w-6 mx-[13px]" />
-          <p className="text-sm m-1">Dashboard</p>
+          <p className="text-sm m-1 font-medium">Dashboard</p>
         </Link>
         <Link
           href={"/expenses"}
           className="flex h-14 items-center w-44 hover:bg-secondary transition-colors"
         >
           <Wallet className="h-6 w-6 mx-[13px]" />
-          <p className="text-sm m-1">Despesas</p>
+          <p className="text-sm m-1 font-medium">Despesas</p>
         </Link>
         <Link
           href={"/revenues"}
           className="flex h-14 items-center w-44 hover:bg-secondary transition-colors"
         >
           <PiggyBank className="h-6 w-6 mx-[13px]" />
-          <p className="text-sm m-1">Receitas</p>
+          <p className="text-sm m-1 font-medium">Receitas</p>
         </Link>
       </div>
       <div>
