@@ -1,6 +1,6 @@
+import AddEntry from "@/components/client-components/add-entry";
 import Sidebar from "@/components/client-components/sidebar";
-import { Button } from "@/components/ui/button";
-import { Plus } from "lucide-react";
+
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -18,9 +18,7 @@ export default function AppLayout({
       <Sidebar />
       {children}
       <div className="absolute bottom-6 right-6">
-        <Button size={"icon"}>
-          <Plus />
-        </Button>
+        <AddEntry />
       </div>
     </div>
   );

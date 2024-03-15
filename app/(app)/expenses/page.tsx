@@ -1,3 +1,3 @@
 export default function Page() {
-  return <div>expoendse</div>;
+  return <div className="mt-12 ml-12">expoendse</div>;
 }

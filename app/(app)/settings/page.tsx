@@ -15,7 +15,7 @@ export default function Page() {
   }
 
   return (
-    <div>
+    <div className="mt-12 ml-12">
       <div className="flex items-center space-x-2">
         <Switch
           id="dark-mode"
