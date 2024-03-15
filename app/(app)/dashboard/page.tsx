@@ -1,3 +1,3 @@
 export default function Page() {
-  return <div>asodkp</div>;
+  return <div className="mt-12 ml-12"></div>;
 }
