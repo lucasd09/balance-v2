@@ -1,6 +1,12 @@
-import Sidebar from "@/components/server-components/sidebar";
+import Sidebar from "@/components/client-components/sidebar";
 import { Button } from "@/components/ui/button";
 import { Plus } from "lucide-react";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Balance - App",
+  description: "",
+};
 
 export default function AppLayout({
   children,

@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import {
   LayoutDashboard,
@@ -7,6 +8,8 @@ import {
   Settings,
 } from "lucide-react";
 import { Button } from "../ui/button";
+import ConfirmDialog from "./confirm-dialog";
+import { signOut } from "next-auth/react";
 
 export default function Sidebar() {
   return (
@@ -35,20 +38,29 @@ export default function Sidebar() {
         </Link>
       </div>
       <div>
-        <Button
-          className="flex h-14 p-0 w-44 items-center justify-start"
-          variant={"ghost"}
+        <Link
+          href={"/settings"}
+          className="flex h-14 items-center w-44 hover:bg-secondary transition-colors"
         >
           <Settings className="h-6 w-6 mx-[13px]" />
-          <p className="text-sm m-1">Configurações</p>
-        </Button>
-        <Button
-          className="flex h-14 p-0 w-44 items-center justify-start"
-          variant={"ghost"}
+          <p className="text-sm m-1 font-medium">Configurações</p>
+        </Link>
+
+        <ConfirmDialog
+          title="Deseja Sair?"
+          description="Ao sair, suas modificações serão salvas."
+          action={() => {
+            signOut();
+          }}
         >
-          <LogOut className="h-6 w-6 mx-[13px]" />
-          <p className="text-sm m-1">Sair</p>
-        </Button>
+          <Button
+            className="flex h-14 p-0 w-44 items-center justify-start"
+            variant={"ghost"}
+          >
+            <LogOut className="h-6 w-6 mx-[13px]" />
+            <p className="text-sm m-1">Sair</p>
+          </Button>
+        </ConfirmDialog>
       </div>
     </div>
   );
