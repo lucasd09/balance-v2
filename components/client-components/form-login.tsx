@@ -11,10 +11,12 @@ import { Input } from "@/components/ui/input";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { signIn } from "next-auth/react";
 import { Button } from "../ui/button";
 import GoogleIcon from "@/components/icons/google";
 import { Separator } from "../ui/separator";
+import { useContext } from "react";
+import { AuthContext } from "@/contexts/auth-context";
+import { useRouter } from "next/navigation";
 
 const schema = z.object({
   email: z
@@ -30,9 +32,16 @@ export default function FormLogin() {
     resolver: zodResolver(schema),
     defaultValues: { email: "", password: "" },
   });
+  const { signIn } = useContext(AuthContext);
+  const router = useRouter();
 
   async function handleForm({ email, password }: form) {
-    signIn("credentials", { email, password }, { redirect: false });
+    const token = await signIn({ email, password });
+
+    if (!!token) {
+      router.push("/dashboard");
+    } else {
+    }
   }
 
   return (
@@ -74,11 +83,7 @@ export default function FormLogin() {
         <Separator className="w-[30%]" />
       </div>
       <div className="mt-4">
-        <Button
-          className="w-full"
-          variant={"outline"}
-          onClick={() => signIn("google")}
-        >
+        <Button className="w-full" variant={"outline"}>
           <GoogleIcon className="size-5 mr-2" />
           Google
         </Button>
