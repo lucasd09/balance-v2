@@ -21,8 +21,9 @@ export default function AppLayout({
   if (!token) {
     redirect("/sign-in");
   }
+
   return (
-    <div className="flex">
+    <div className="flex select-none">
       <Sidebar />
       {children}
       <div className="absolute bottom-6 right-6">

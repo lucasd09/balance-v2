@@ -15,7 +15,8 @@ export default function Page() {
   }
 
   return (
-    <div className="mt-12 ml-12">
+    <div className="mt-12 ml-12 space-y-10">
+      <h1 className="text-xl font-bold">Configurações</h1>
       <div className="flex items-center space-x-2">
         <Switch
           id="dark-mode"
