@@ -2,52 +2,61 @@
 import Link from "next/link";
 import {
   LayoutDashboard,
-  Wallet,
-  PiggyBank,
   LogOut,
   Settings,
   Landmark,
+  HandCoins,
+  Tag,
+  WalletMinimal,
 } from "lucide-react";
 import { Button } from "../ui/button";
 import ConfirmDialog from "./confirm-dialog";
 
 export default function Sidebar() {
   return (
-    <div className="flex flex-col select-none pt-14 items-start justify-between w-14 h-screen overflow-clip border-r transition-width duration-300 hover:w-44">
+    <div className="flex flex-col select-none pt-14 items-start justify-between w-14 h-screen overflow-clip border-r transition-width duration-300 hover:w-48">
       <div>
         <Link
           href={"/dashboard"}
-          className="flex h-14 items-center w-44 hover:bg-secondary transition-colors"
+          className="flex h-14 items-center w-48 hover:bg-secondary transition-colors"
         >
           <LayoutDashboard className="h-6 w-6 mx-[14px]" />
           <p className="text-sm m-1 font-medium">Dashboard</p>
         </Link>
         <Link
-          href={"/expenses"}
-          className="flex h-14 items-center w-44 hover:bg-secondary transition-colors"
+          href={"/transactions"}
+          className="flex h-14 items-center w-48 hover:bg-secondary transition-colors"
         >
-          <Wallet className="h-6 w-6 mx-[14px]" />
-          <p className="text-sm m-1 font-medium">Despesas</p>
+          <WalletMinimal className="h-6 w-6 mx-[14px]" />
+          <p className="text-sm m-1 font-medium">Transações</p>
         </Link>
-        <Link
-          href={"/revenues"}
-          className="flex h-14 items-center w-44 hover:bg-secondary transition-colors"
-        >
-          <PiggyBank className="h-6 w-6 mx-[14px]" />
-          <p className="text-sm m-1 font-medium">Receitas</p>
-        </Link>
+
         <Link
           href={"/accounts"}
-          className="flex h-14 items-center w-44 hover:bg-secondary transition-colors"
+          className="flex h-14 items-center w-48 hover:bg-secondary transition-colors"
         >
           <Landmark className="h-6 w-6 mx-[14px]" />
-          <p className="text-sm m-1 font-medium">Contas</p>
+          <p className="text-xs m-1 font-medium">Contas</p>
+        </Link>
+        <Link
+          href={"/budget"}
+          className="flex h-14 items-center w-48 hover:bg-secondary transition-colors"
+        >
+          <HandCoins className="h-6 w-6 mx-[14px]" />
+          <p className="text-sm m-1 font-medium">Limite de gastos</p>
+        </Link>
+        <Link
+          href={"/categories"}
+          className="flex h-14 items-center w-48 hover:bg-secondary transition-colors"
+        >
+          <Tag className="h-6 w-6 mx-[14px]" />
+          <p className="text-sm m-1 font-medium">Categorias</p>
         </Link>
       </div>
       <div>
         <Link
           href={"/settings"}
-          className="flex h-14 items-center w-44 hover:bg-secondary transition-colors"
+          className="flex h-14 items-center w-48 hover:bg-secondary transition-colors"
         >
           <Settings className="h-6 w-6 mx-[14px]" />
           <p className="text-sm m-1 font-medium">Configurações</p>
@@ -59,7 +68,7 @@ export default function Sidebar() {
           action={() => {}}
         >
           <Button
-            className="flex h-14 p-0 w-44 items-center justify-start"
+            className="flex h-14 p-0 w-48 items-center justify-start"
             variant={"ghost"}
           >
             <LogOut className="h-6 w-6 mx-[14px]" />
