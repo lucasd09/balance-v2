@@ -1,5 +1,6 @@
 import AddEntry from "@/components/client-components/add-entry";
 import Sidebar from "@/components/client-components/sidebar";
+import { Toaster } from "@/components/ui/sonner";
 
 import type { Metadata } from "next";
 import { cookies } from "next/headers";
@@ -29,6 +30,7 @@ export default function AppLayout({
       <div className="absolute bottom-6 right-6">
         <AddEntry />
       </div>
+      <Toaster />
     </div>
   );
 }
