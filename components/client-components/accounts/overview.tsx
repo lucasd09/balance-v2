@@ -27,7 +27,7 @@ export default function AccountsOverview() {
   );
 
   return (
-    <div className="flex flex-wrap max-w-[900px]">
+    <div className="flex flex-wrap w-[900px]">
       {isLoading ? (
         <div>
           <AccountSkeleton />

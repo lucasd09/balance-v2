@@ -61,7 +61,7 @@ export default function CategoryOverview() {
   const { data, mutate } = useFetch<CategoryProps[]>(`/categories/${user.id}`);
 
   return (
-    <div className="w-[512px] space-y-4">
+    <div className="w-[600px] space-y-4">
       <div className="flex space-x-2 justify-between">
         <AddCategory userId={user.id} mutate={mutate} />
         <Button size={"icon"} variant={"outline"} onClick={() => mutate()}>
