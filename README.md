@@ -1,36 +1,41 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Balance
 
-## Getting Started
+Balance é um sistema de gerenciamento de finanças pessoais focado em ajudar os indivíduos a controlar suas despesas, receitas e metas financeiras. O aplicativo permite aos usuários gerenciar suas finanças de forma eficiente com ferramentas intuitivas para orçamentar, categorizar transações, definir metas financeiras e gerar relatórios para análise financeira.
 
-First, run the development server:
+## Requisitos Funcionais
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. **Cadastro de Contas Bancárias e Cartões de Crédito:**
+   - Os usuários podem cadastrar suas contas bancárias e cartões de crédito no sistema.
+   
+2. **Acompanhamento de Despesas e Receitas:**
+   - Os usuários podem registrar suas despesas e receitas para acompanhar seus gastos e ganhos financeiros.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. **Categorização Automática de Transações:**
+   - O sistema categoriza automaticamente as transações com base em padrões de gastos, facilitando a análise financeira.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+4. **Definição de Metas Financeiras e Orçamentos:**
+   - Os usuários podem definir metas financeiras e orçamentos para ajudar no planejamento e controle financeiro.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+5. **Geração de Relatórios e Gráficos:**
+   - O sistema gera relatórios e gráficos para visualização e análise detalhada das finanças pessoais dos usuários.
 
-## Learn More
+6. **Notificações e Lembretes:**
+   - O sistema envia notificações e lembretes para vencimentos de contas e metas financeiras.
 
-To learn more about Next.js, take a look at the following resources:
+7. **Integração com Serviços Financeiros Externos:**
+   - Os usuários podem integrar suas contas bancárias e investimentos externos para consolidar todas as suas informações financeiras em um só lugar.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Instalação e Uso
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+1. Clone o repositório: `git clone https://github.com/seu-usuario/balance.git`
+2. Instale as dependências: `npm install`
+3. Execute o servidor de desenvolvimento: `npm run dev`
+4. Acesse o Balance em seu navegador: `http://localhost:3000`
 
-## Deploy on Vercel
+## Contribuição
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Contribuições são bem-vindas! Sinta-se à vontade para abrir uma issue para reportar bugs ou sugerir novas funcionalidades. Se desejar contribuir diretamente, por favor, abra um pull request.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Licença
+
+Este projeto está licenciado sob a [Licença MIT](LICENSE).
