@@ -26,10 +26,8 @@ export default function AppLayout({
   return (
     <div className="flex select-none">
       <Sidebar />
-      {children}
-      <div className="absolute bottom-6 right-6">
-        <AddEntry />
-      </div>
+      <div className="flex w-full ml-14">{children}</div>
+      <div className="absolute bottom-6 right-6"></div>
       <Toaster />
     </div>
   );

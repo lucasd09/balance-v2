@@ -2,7 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export default function Page() {
   return (
-    <div className="my-12 mx-12">
+    <div className="my-12 mx-6">
       <div className="space-y-10">
         <h1 className="text-xl font-bold">Olá, Lucas</h1>
         <div className="space-y-2">

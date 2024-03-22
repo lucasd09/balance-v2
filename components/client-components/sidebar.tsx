@@ -20,7 +20,7 @@ export default function Sidebar() {
   }, []);
 
   return (
-    <div className="flex flex-col select-none pt-14 items-start justify-between w-14 h-screen overflow-clip border-r transition-width duration-300 hover:w-48">
+    <div className="fixed top-0 bg-background left-0 z-50 flex flex-col select-none pt-14 items-start justify-between w-14 h-screen overflow-clip border-r transition-width duration-300 hover:w-48">
       <div>
         <Link
           href={"/dashboard"}

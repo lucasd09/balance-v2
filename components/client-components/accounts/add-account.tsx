@@ -6,7 +6,7 @@ import {
   DialogTrigger,
   DialogClose,
 } from "@/components/ui/dialog";
-import { PlusCircle } from "lucide-react";
+import { Plus } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -41,7 +41,7 @@ export default function AddAccount() {
     <Dialog>
       <DialogTrigger asChild>
         <Card className="w-64 h-32 px-4 py-4 flex flex-col justify-center items-center mr-4 mb-4 cursor-pointer">
-          <PlusCircle className="size-12 text-primary dark:text-neutral-600" />
+          <Plus className="size-12 text-primary dark:text-neutral-600" />
         </Card>
       </DialogTrigger>
       <DialogContent>
